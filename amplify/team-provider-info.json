@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-redheadrhythms-dev-184728-authRole",
+      "UnauthRoleArn": "arn:aws:iam::452187130735:role/amplify-redheadrhythms-dev-184728-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::452187130735:role/amplify-redheadrhythms-dev-184728-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-redheadrhythms-dev-184728-deployment",
+      "UnauthRoleName": "amplify-redheadrhythms-dev-184728-unauthRole",
+      "StackName": "amplify-redheadrhythms-dev-184728",
+      "StackId": "arn:aws:cloudformation:eu-west-1:452187130735:stack/amplify-redheadrhythms-dev-184728/eaff2680-dd47-11ed-9946-0a5070b1da27",
+      "AmplifyAppId": "d2oz96bpc9nynv"
+    },
+    "categories": {
+      "auth": {
+        "redheadrhythms3d015fcd": {}
+      }
+    }
+  }
+}
