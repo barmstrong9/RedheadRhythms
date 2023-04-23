@@ -1,0 +1,12 @@
+projects:
+  redheadrhythms:
+    schemaPath: src/graphql/schema.json
+    includes:
+      - src/grpahql
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: typescript
+        generatedFileName: src/API.ts
+        docsFilePath: src
