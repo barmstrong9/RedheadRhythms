@@ -12,8 +12,8 @@ export const createSong = /* GraphQL */ `
       title
       artist
       filepath
-      createdAt
       updatedAt
+      createdAt
     }
   }
 `;
@@ -27,8 +27,8 @@ export const updateSong = /* GraphQL */ `
       title
       artist
       filepath
-      createdAt
       updatedAt
+      createdAt
     }
   }
 `;
@@ -42,8 +42,8 @@ export const deleteSong = /* GraphQL */ `
       title
       artist
       filepath
-      createdAt
       updatedAt
+      createdAt
     }
   }
 `;

@@ -9,8 +9,8 @@ export const getSong = /* GraphQL */ `
       title
       artist
       filepath
-      createdAt
       updatedAt
+      createdAt
     }
   }
 `;
@@ -26,8 +26,8 @@ export const listSongs = /* GraphQL */ `
         title
         artist
         filepath
-        createdAt
         updatedAt
+        createdAt
       }
       nextToken
     }

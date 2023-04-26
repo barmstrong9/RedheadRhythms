@@ -9,8 +9,8 @@ export const onCreateSong = /* GraphQL */ `
       title
       artist
       filepath
-      createdAt
       updatedAt
+      createdAt
     }
   }
 `;
@@ -21,8 +21,8 @@ export const onUpdateSong = /* GraphQL */ `
       title
       artist
       filepath
-      createdAt
       updatedAt
+      createdAt
     }
   }
 `;
@@ -33,8 +33,8 @@ export const onDeleteSong = /* GraphQL */ `
       title
       artist
       filepath
-      createdAt
       updatedAt
+      createdAt
     }
   }
 `;
