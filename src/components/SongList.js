@@ -5,7 +5,6 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import IconButton from "@mui/material/IconButton";
-import PauseCircleIcon from '@mui/icons-material/PauseCircle';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 
 export default function SongList({ songs, audioURL, songPlaying, toggleSong }) {
@@ -15,7 +14,7 @@ export default function SongList({ songs, audioURL, songPlaying, toggleSong }) {
       {songs.map((song, index) => {
         const image = `https://source.unsplash.com/random/200x200/?music&id=${song.id}`
         return (<Grid item key={song.id} xs={12} sm={6} md={4}>
-          <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+          <Card className="song-card" sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
             <CardMedia
               component="img"
               image={image}
@@ -29,17 +28,22 @@ export default function SongList({ songs, audioURL, songPlaying, toggleSong }) {
                 <b>{song.artist}</b>
               </Typography>
             </CardContent>
-            <CardActions style={{ height: '30px', maxHeight: '30px' }}>
-              <IconButton id='play-pause-music' style={{ margin: '0 auto 0 auto' }} aria-label="play" onClick={() => toggleSong(index)}>
-                {songPlaying === index ? <PauseCircleIcon /> : <PlayCircleIcon />}
-              </IconButton>
+            <CardActions style={{ height: '8px', maxHeight: '40px', padding: '0px' }}>
+              {songPlaying === index ? (
+                null
+              ) : (
+                <IconButton id='play-pause-music' style={{ margin: '0 auto 0 auto' }} aria-label="play" onClick={() => toggleSong(index)}>
+                  <PlayCircleIcon />
+                </IconButton>
+              )}
               {
                 songPlaying === index ? (
                   <audio
+                    autoPlay={true}
                     controls
                     src={audioURL}
-                    // onPause={() => toggleSong(index)}
-                    >
+                    style= {{ width: '100%' }}
+                  >
                   </audio>
                 ) : null
               }
