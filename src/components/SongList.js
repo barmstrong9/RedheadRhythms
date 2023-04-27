@@ -36,10 +36,10 @@ export default function SongList({ songs, audioURL, songPlaying, toggleSong }) {
               {
                 songPlaying === index ? (
                   <audio
-                    autoPlay={true}
                     controls
                     src={audioURL}
-                    onPause={() => toggleSong(index)}>
+                    // onPause={() => toggleSong(index)}
+                    >
                   </audio>
                 ) : null
               }

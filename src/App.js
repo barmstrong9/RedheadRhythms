@@ -20,7 +20,6 @@ function App({ signOut, user }) {
   }, [])
 
   const getSongs = async () => {
-    console.log('getting songs')
     try {
       const songData = await API.graphql(graphqlOperation(listSongs));
       setSongs(songData.data.listSongs.items)
@@ -37,10 +36,9 @@ function App({ signOut, user }) {
 
   const song = songs[index];
   const filePath = song.filepath
-  // console.log(songFilePath)
+
   try {
     const fileAccessURL = await Storage.get(filePath, {expires: 60})
-    console.log(filePath, "this should work")
     setSongPlaying(index);
     setAudioURL(fileAccessURL);
     return;
@@ -53,11 +51,9 @@ function App({ signOut, user }) {
 
   return (
     <div className="App">
-      <Album signOut={signOut} user={user} songs={songs} audioURL={audioURL} songPlaying={songPlaying}
-        toggleSong={toggleSong} />
+      <Album signOut={signOut} user={user} songs={songs} audioURL={audioURL} songPlaying={songPlaying} toggleSong={toggleSong} />
     </div>
   );
 }
 
 export default withAuthenticator(App);
-

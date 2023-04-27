@@ -12,14 +12,14 @@
       "AmplifyAppId": "d2oz96bpc9nynv"
     },
     "categories": {
-      "auth": {
-        "redheadrhythms3d015fcd": {}
+      "storage": {
+        "musicbucket": {}
       },
       "api": {
         "redheadrhythms": {}
       },
-      "storage": {
-        "musicbucket": {}
+      "auth": {
+        "cognitousers": {}
       }
     }
   }

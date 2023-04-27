@@ -11,12 +11,12 @@ export default function CustomAppBar({ signOut, user }) {
       <Toolbar>
         <LibraryMusicIcon sx={{ mr: 2 }} />
         <Typography variant="h6" color="inherit" noWrap>
-          Music Player
+          Your Music
         </Typography>
         <Typography variant="h6" color="inherit" noWrap sx={{ marginLeft: "auto" }} >
-          Hello, {user.attributes.email}
+          Hello, {user.attributes.given_name}
         </Typography>
-        <LogoutIcon sx={{ marginLeft: "auto" }} onClick={signOut} />
+          <LogoutIcon sx={{ marginLeft: "auto", cursor: 'pointer' }} onClick={signOut} />
       </Toolbar>
     </AppBar>
   )

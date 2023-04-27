@@ -18,7 +18,7 @@
     }
   },
   "auth": {
-    "redheadrhythms3d015fcd": {
+    "cognitousers": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -31,7 +31,8 @@
           "passwordPolicyMinLength": 8
         },
         "signupAttributes": [
-          "EMAIL"
+          "EMAIL",
+          "GIVEN_NAME"
         ],
         "socialProviders": [],
         "usernameAttributes": [
