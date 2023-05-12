@@ -5,7 +5,16 @@ import CustomAppBar from './AppBar';
 import Footer from './Footer';
 import SongList from './SongList';
 
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#ffa500'
+    },
+    secondary: {
+      main: '#051937'
+    }
+  }
+});
 
 export default function Album({ signOut, user, songs, audioURL, songPlaying, toggleSong }) {
   return (

@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="text.secondary" align="center">
+    <Typography variant="body2" color="inherit" align="center">
       Brandon Armstrong{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -14,7 +14,7 @@ function Copyright() {
 export default function Footer() {
   return (
     <Box sx={{
-      bgcolor: 'background.paper', p: 1,
+      bgcolor: '#ffa500',
       display: 'flex',
       flexDirection: 'column',
       marginTop: 'auto'
@@ -22,7 +22,7 @@ export default function Footer() {
       <Typography
         variant="subtitle1"
         align="center"
-        color="text.secondary"
+        color="inherit"
         component="p"
       >
         Little Project For Me

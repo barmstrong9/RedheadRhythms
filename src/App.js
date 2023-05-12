@@ -43,7 +43,7 @@ function App({ signOut, user }) {
     setAudioURL(fileAccessURL);
     return;
   } catch (error) {
-    console.error("could not acces song in s3:", error);
+    console.error("could not access song in s3:", error);
     setAudioURL("");
     setSongPlaying(""); 
   }
