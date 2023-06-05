@@ -10,7 +10,11 @@ import UploadForm from './uploadForm';
 export default function CustomAppBar({ signOut, user }) {
   const [showUploadForm, setShowUploadForm] = React.useState(false)
   const handleUploadIconClick = () => {
-    setShowUploadForm(true);
+    if (showUploadForm === false) {
+      setShowUploadForm(true);
+    } else {
+      setShowUploadForm(false)
+    }
   };
 
   const handleUploadFormClose = () => {
