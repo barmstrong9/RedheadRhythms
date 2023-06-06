@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { API } from 'aws-amplify';
-import { v4 as uuid } from 'uuid';
+// import { API } from 'aws-amplify';
+// import { v4 as uuid } from 'uuid';
 import { Storage } from 'aws-amplify';
 
 export default function UploadForm({ user }) {
@@ -16,23 +16,14 @@ export default function UploadForm({ user }) {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    const extension = filename.split('.').pop();
-    const key = `${uuid()}.${extension}`;
-    const url = await API.post('redheadrhythms', `public/songs/${key}`, {
-      body: { user: user.username },
-    });
-    const response = await fetch(url, {
-      method: 'PUT',
-      body: file,
-      headers: {
-        'Content-Type': file.type,
-      },
-    });
-    if (response.ok) {
-      setUploaded(true);
+    e.preventDefault()
+    try {
+      const result = await Storage.put(filename, file)
+      setUploaded(true)
+      console.log(result)
+    } catch (error) {
+      console.log(error)
     }
-    const result = await Storage.put(filename, file)
   };
 
   return (
